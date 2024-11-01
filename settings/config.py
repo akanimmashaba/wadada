@@ -1,5 +1,6 @@
 from pydantic_settings import BaseSettings
 from pydantic import PostgresDsn
+from supabase import create_client, Client
 
 class Settings(BaseSettings):
     DATABASE_URL: str
@@ -12,3 +13,5 @@ class Settings(BaseSettings):
         extra = "ignore"
 
 settings = Settings()
+
+supabase = create_client(settings.SUPABASE_URL, settings.SUPABASE_KEY)

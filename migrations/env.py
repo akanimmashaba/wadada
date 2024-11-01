@@ -7,7 +7,33 @@ from sqlalchemy.ext.asyncio import async_engine_from_config
 from sqlmodel import SQLModel
 from alembic import context
 from settings.config import settings
-from models.user import User
+from models.profile import Profile
+from models.user_preference import UserPreference
+from models.profile_models.children import Children
+from models.profile_models.drinking import Drinking
+from models.profile_models.education import Education
+from models.profile_models.employment import Employment
+from models.profile_models.gender import Gender
+from models.profile_models.personality import Personality
+from models.profile_models.pets import Pets
+from models.profile_models.religion import Religion
+from models.profile_models.seeking import Seeking
+from models.profile_models.sexuality import Sexuality
+from models.profile_models.smoking import Smoking
+from models.profile_models.location import Location
+from models.profile_models.image import Image
+from models.profile_models.interests import Interest
+from models.profile_models.language import Languages
+from models.profile_models.relationship_status import RelationshipStatus
+
+from models.subscription import PlanType, Discount, Transaction, Subscription
+from models.match import Match
+from models.message import Message
+from models.notification import Notification
+from models.report import Report
+from models.swipe import Swipe 
+from models.block import Block
+from models.chatroom import ChatRoom
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
